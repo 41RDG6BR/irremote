@@ -13,15 +13,19 @@ void loop()
 {
   if (IrReceiver.decode()) // If the IR receiver has received something
   {
-    if (IrReceiver.decodedIRData.decodedRawData == 0xEF10BF00) // If '1' was pressed on the remote
+    if (IrReceiver.decodedIRData.decodedRawData == 0xE916FF00) // If '1' was pressed on the remote
+    {
+      Serial.println("Thing 0");
+    }
+    if (IrReceiver.decodedIRData.decodedRawData == 0xF30CFF00) // If '1' was pressed on the remote
     {
       Serial.println("Thing 1");
     }
-    else if (IrReceiver.decodedIRData.decodedRawData == 0xEE11BF00) // If '2' pressed
+    else if (IrReceiver.decodedIRData.decodedRawData == 0xE718FF00) // If '2' pressed
     {
       Serial.println("Thing 2");
     }
-    else if (IrReceiver.decodedIRData.decodedRawData == 0xED12BF00) // If '3' pressed
+    else if (IrReceiver.decodedIRData.decodedRawData == 0xA15EFF00) // If '3' pressed
     {
       Serial.println("Thing 3");
     }
